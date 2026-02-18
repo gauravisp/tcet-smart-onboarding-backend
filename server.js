@@ -16,7 +16,14 @@ const app = express();
 // ============================================================
 // MIDDLEWARE
 // ============================================================
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://agent-6995b20858f8250799--gleeful-granita-3a922c.netlify.app"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // ============================================================
